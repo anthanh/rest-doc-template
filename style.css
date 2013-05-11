@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+footer {
+	text-align: right;
+}
+
+/* API */
+
+#side-menu {
+	/*width: 250px;*/
+	margin-right: 10px;
+}
+
+#side-menu .well {
+	/*height: 1030px;*/
+	/*width: 200px;*/
+}
+
+#side-menu .well, #side-menu ul {
+	/*position: fixed;*/
+}
+
+.page-header {
+	margin-top: 60px;
+}
+
+.description+div{
+	padding-left: 40px;
+}
+
+
+/* TEST */
+
+textarea {
+	width: 98%;
+}
+
+#request-builder {
+	height: 300px;
+}
+
+#request-actions {
+	text-align: right;
+}
+
+.manual {
+	width: 98%;
+}
+
+.item-list {
+	width: 100%;
+}
