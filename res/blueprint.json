@@ -1,0 +1,110 @@
+{
+    "gateway": "http://localhost",
+    "resources": [
+        {
+            "title": "GET /user",
+            "type": "Usuario",
+            "description": "Obtener datos del usuario logueado",
+            "path": "/user",
+            "logued": false,
+            "method": "GET",
+            "notifications": ["WARNING", "ENCOURAGING"],
+            "query":[
+                {
+                    "name": "page",
+                    "type": "integer",
+                    "required": false,
+                    "default": 0,
+                    "description": {
+                        "type": "String",
+                        "value": ""
+                    }
+                },
+                {
+                    "name": "birthdate",
+                    "type": "String",
+                    "required": true,
+                    "default": 10,
+                    "description": {
+                        "type": "format",
+                        "value": "dd-mm-yyyy"
+                    }
+                }
+            ],
+            "queryExample": "",
+            "data": "{\"result\":\"ok\",\"name\":\"Nombre\",\"surnames\":\"Apellidos\",\"gender\":\"0\",\"birthdate\":\"05-10-1985\",\"idcard\":\"abcdefg\"}",
+            "response": "{\"_payload\":{},\"_response\":{\"code\":\"?\",\"devInfo\":null,\"info\":null,\"message\":null,\"status\":200,\"type\":null}}",
+            "codeStatus":[
+                {
+                    "code": 200,
+                    "reason": ""
+                }
+            ],
+            "comments": [
+                "asd",
+                "asdasdasd"
+            ]
+        },
+        {
+            "title": "PUT /user",
+            "type": "Usuario",
+            "description": "descripción",
+            "path": "/user",
+            "logued": true,
+            "method": "PUT",
+            "query":[
+                {
+                    "name": "page",
+                    "type": "integer",
+                    "required": false,
+                    "default": 0,
+                    "description": "Mayor o igual que <code>0</code>"
+                },
+                {
+                    "name": "size",
+                    "type": "integer",
+                    "required": false,
+                    "default": 10,
+                    "description": "Mayor o igual que <code>1</code>"
+                },
+                {
+                    "name": "fields",
+                    "type": "String",
+                    "required": false,
+                    "default": "''",
+                    "description": "Nombres de los campos por el que se filtran"
+                }
+            ],
+            "queryExample": "",
+            "data": "{\"result\":\"ok\",\"name\":\"Nombre\",\"surnames\":\"Apellidos\",\"gender\":\"0\",\"birthdate\":\"05-10-1985\",\"idcard\":\"abcdefg\"}",
+            "response": "{\"_payload\":{},\"_response\":{\"code\":\"?\",\"devInfo\":null,\"info\":null,\"message\":null,\"status\":200,\"type\":null}}",
+            "codeStatus":[
+                {
+                    "code": 200,
+                    "reason": "Ok"
+                },
+                {
+                    "code": 400,
+                    "reason": "Petición sintácticamente incorrecta"
+                },
+                {
+                    "code": 401,
+                    "reason": "No autenticado"
+                },
+                {
+                    "code": 403,
+                    "reason": "No autorizado"
+                },
+                {
+                    "code": 404,
+                    "reason": "No existe"
+                },
+                {
+                    "code": 422,
+                    "reason": "Petición semánticamente incorrecta"
+                }
+            ],
+            "comments": "comment"
+        }
+    ]
+}
